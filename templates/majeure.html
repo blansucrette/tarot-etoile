@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="page de signification des cartes du tarot etoile"/>
+    <meta name="authors" content="Blandine Gosselin"/>
+    <meta name="keywords" content="tarot, etoile, signification, cartes"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/tarot.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+    <title>Tarot Etoilé</title>
+</head>
+
+<header>
+    <h1 class="titre"><a class="titre" href="{{url_for('welcome')}}"> 
+        <img src="/static/petite_etoile.png" class="etoile"> Tarot Etoilé 
+        <img src="/static/petite_etoile.png" class="etoile">
+    </a></h1>
+        
+    <div class="container">
+        <nav class="navbar navbar-expand-lg justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="{{url_for('welcome')}}">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('majeure')}}">Arcane majeure</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('batons')}}">Bâtons</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('coupes')}}">Coupes</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('epees')}}">Epées</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('deniers')}}">Deniers</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <h4 class="page-title">Arcane majeure</h4>
+    <div class="cards-box container-fluid" id="majeures">
+        <div class="row justify-content-center">
+            <div class="flip-box carte-contour" id="folle">
+                <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="/static/folle.png" alt="0" class="carte">
+                </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Le moment est venu pour un nouveau départ, c’est un nouveau cycle qui commence. Innocente, insouciante et 
+                                libre, la folle est un encouragement à faire le premier pas, à faire le grand saut. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Quand l’insouciance devient de l’inconscience, attention aux actes non réfléchis et mal préparés. Il faut 
+                                savoir cesser de faire l’enfant.  
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="magicienne">
+                <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="/static/magicienne.png" alt="I" class="carte">
+                </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Comme elle, vous avez toutes les cartes en main pour réussir. Ayez confiance en vous, vous avez toutes les 
+                                compétences nécessaires. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Attention à ne pas faire fausse route, en utilisant mal vos talents ou en procrastinant.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="pretresse">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/pretresse.png" alt="II" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Ecoutez votre intuition, elle vous guide et est pleine de sagesse. Elle peut vous mener à une meilleure 
+                                connaissance de vous-même et à un sentiment d’harmonie. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Votre connexion à votre intuition et votre sagesse intérieure semble interrompue. Essayez de vous 
+                                retrouver et de vous reconnecter à votre être intérieur authentique.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="imperatrice">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/imperatrice.png" alt="III" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Cette figure maternelle vous invite à vous laisser guider par votre énergie féminine, synonyme de 
+                                croissance, d’abondance, de fertilité et de création. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Votre flow créatif semble bloqué, essayez de vous reconnecter à votre énergie féminine, l’énergie 
+                                maternante de l’impératrice peut vous aider à guérir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="empereur">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/empereur.png" alt="quatre" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Cette figure d’autorité paternelle vous encourage dans une bonne organisation et une bonne discipline. 
+                                Avec un cadre et une structure solides, vous êtes capable d’atteindre vos objectifs.
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Attention à ne pas être trop rigide et inflexible, en voulant tout contrôler vous risquez de faire plus 
+                                de mal que de bien.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="hierophante">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/hierophante.png" alt="cinq" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Notre besoin d’appartenance à un groupe nous demande parfois d’obéir à ses règles et d’honorer certains devoirs. 
+                                Mais toutes les traditions ne sont pas mauvaises, certaines coutumes ont du bon et méritent d’être transmises. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Quand le cadre et la pression du groupe deviennent suffocants, il faut savoir briser les règles et se détourner de 
+                                certains enseignements et croyances.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="amants">
+                <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="/static/amants.png" alt="six" class="carte">
+                </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Face aux émotions fortes et aux choix que l’on doit faire, affronter la vie en duo est plus facile. Votre harmonie et 
+                                confiance vous donnent envie de vous éloigner du groupe pour être à deux. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p> Face à l'incompatibilité, il ne sert à rien de vouloir forcer les choses, parfois il faut les laisser prendre fin.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="chariot">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/chariot.png" alt="VII" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Il est temps d’avancer, d’arrêter de préparer et d’anticiper. En vous focalisant sur l’objectif et en vous mettant en 
+                                action, les choses avanceront avec succès. Et plus que cet objectif, c’est le voyage qui vous fera grandir.
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Lorsqu’on avance à l’aveuglette sans objectif, il est facile de se disperser et de se décourager. Pour avancer, il faut 
+                                peut-être d’abord retrouver la raison qui vous pousse à le faire.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="force">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/force.png" alt="huit" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Elle peut prendre de nombreuses formes telles que l’endurance, le courage, la motivation ou la maîtrise de soi. Mais 
+                                la force se trouve aussi dans des gestes simples, comme une étreinte, ou dans la compassion. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>La peur, l’anxiété ou encore l’abandon peuvent mener à un sentiment de perte de contrôle. Peut-être faut-il faire preuve 
+                                de compassion, que ce soit pour vous ou pour autrui.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="ermite">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/ermite.png" alt="neuf" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Si le besoin de recherche spirituelle et de trouver des réponses à nos questions se fait ressentir, peut-être est-il temps 
+                                de s’accorder un peu de calme, afin de pouvoir méditer et faire un travail sur soi. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Attention à ne pas être trop dans votre tête et  ne pas vous y enfermer. Sortir de votre solitude peut vous aider face à un 
+                                manque de discernement.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="roue">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/roue.png" alt="dix" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>La chance finit toujours par tourner et les choses par s'aligner. Apprenez à vous laisser porter par le courant du destin et 
+                                à saisir ses opportunités quand elles se présentent. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Il ne sert à rien d’essayer de contrôler ce qui est hors de portée, vous pourriez même manquer certaines opportunités, surtout 
+                                en temps de mauvais karma ou d’énergie négative.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="justice">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/justice.png" alt="XI" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Quelles que soient les actions entreprises, nous ferons face à leurs conséquences justes et équilibrées. Essayez de rester objectif.ve 
+                                et prenez les décisions les plus justes possibles. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Même en essayant de rester juste, il n’est pas toujours possible de prendre des décisions équitables pour tous. Peut-être faut-il prendre 
+                                du recul sur votre situation, surtout sans avoir toutes les informations. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="pendue">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/pendue.png" alt="XII" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Si vous vous sentez bloqué.e ou coincé.e, faites comme elle : lâchez prise et essayez de regarder votre situation sous un angle différent, 
+                                changez de perspective. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p> Parfois, lorsqu’on se sent coincé.e, il faut malgré tout passer par les voies traditionnelles et le rester encore quelque temps, avant que 
+                                les choses ne puissent se débloquer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="mort">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/mort.png" alt="XIII" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Un chapitre prend fin, permettant au nouveau de commencer et dans cette transition, accepter le changement vous aide à vous libérer du passé.
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Certaines périodes de stagnation sont nécessaires avant d'être capable d’aller de l’avant. Prenez votre temps pour constater et réaliser la 
+                                situation, pour qu’une fois le moment venu, vous puissiez avancer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="temperance">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/temperance.png" alt="XIV" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>L’ancrage et la modération nous apportent bien-être et équilibre, et avec patience et application, nous mènent à la guérison. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Le déséquilibre et le chaos nourrissent l’anxiété et les disputes. Essayez de retrouver un point d’ancrage. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="diable">
+                <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="/static/diable.png" alt="XV" class="carte">
+                </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Que vous en soyez la victime ou l’instigateur, manipulation et tentation sont à l'œuvre. Peut-être vous faut-il prendre du recul 
+                                afin de vous en rendre compte et d’être capable de rompre le charme. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Le moment est venu de se libérer et de briser ses chaînes. Il est temps pour vous de rompre les mauvais cycles et d’en sortir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="tour">
+                <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="/static/tour.png" alt="XVI" class="carte">
+                </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>En faisant face à un énorme bouleversement, vous sentez peut-être que tout s’effondre autour de vous. Il n’est pas possible de 
+                                revenir à un état antérieur, mais vous pouvez trouver un nouvel équilibre.
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Ce moment de calme qui vient avant ou après la tempête est l’occasion d’affronter ce que l’on a enfoui et d’accepter les 
+                                changements passés ou à venir.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="etoile">
+                <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="/static/etoile.png" alt="XVII" class="carte">
+                </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Quand nous sommes en alignement avec notre être authentique, nous scintillons et rayonnons de l’intérieur. Cette lumière, 
+                                cette étoile nous guide, elle nourrit notre abondance et notre créativité. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Vous semblez avoir perdu confiance en votre lumière intérieure et peut-être que vous faites face à certains blocages. 
+                                Prenez le temps de guérir votre étoile intérieure et le moment venu, elle sera capable de briller à nouveau.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="lune">
+                <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="/static/lune.png" alt="XVIII" class="carte">
+                </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Les choses que l’on enfouit remontent à la surface et nous pouvons alors avoir l’impression d’être dans le noir. Il faut 
+                                leur faire face et prendre le temps de les explorer. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p> Vous semblez être dans le déni ou chercher à faire éclater une vérité dont l’heure n’est pas encore venue. Ne laissez pas 
+                                vos peurs prendre le dessus et laissez les choses se faire, car parfois, la seule manière d’en sortir est de les traverser.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="soleil">
+                <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="/static/soleil.png" alt="XIX" class="carte">
+                </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>La joie et la bonne humeur qui vous entourent semblent vous offrir une énergie infinie et un environnement sain. Soyez vous-même, 
+                                amusez-vous et profitez pleinement de votre créativité. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Quelque chose semble ternir votre bonheur ou vous empêcher d’en profiter. Faites attention aux personnes avec qui vous partagez 
+                                certaines choses et soyez peut-être un peu plus réaliste. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="jugement">
+                <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="/static/jugement.png" alt="XX" class="carte">
+                </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Il ne sert à rien de vous inventer des excuses lorsque vous ressentez un appel profond. Faites-vous confiance, vous savez ce qui 
+                                est bon pour vous, embrassez cet appel et ce changement.
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Vous semblez vouloir résister à un changement ou redouter une vérité. Votre jugement n’est peut-être pas au mieux pour le moment, 
+                                prenez d’abord le temps d’avoir une vision globale de la situation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="monde">
+                <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="/static/monde.png" alt="XXI" class="carte">
+                </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>En arrivant au bout de ce voyage, nous admirons ce qui a été accompli, tandis qu’un sentiment d’abondance et de plénitude nous envahit. 
+                                Durant cette transition, nos acquis nous servent à aller de l’avant, dans ce nouveau voyage qui commence. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Faire une pause est parfois nécessaire, mais ne restez pas dans une position où vous stagnez et ne pouvez plus évoluer, dans un sentiment 
+                                d'inachèvement. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h5> Le Tarot Etoilé </h5>
+                <p class="legal-stuff">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+                        <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+                    </svg>
+                    Tarot Etoilé. Tous droits réservés
+                    </p>
+            </div>                
+
+            <div class="col">
+                <p> Retrouvez-moi sur les réseaux soiaux </p>
+
+                <div class="container-fluid justify-content-center">
+                    <a class="custom-icon" href="https://www.instagram.com/blandine_is_drawing/profilecard/?igsh=MXdrOG43dHk3YmEzcA==">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                        </svg> </a>
+                    <a class="custom-icon" href="https://www.tiktok.com/@blansucrette?_t=8shgAksV1C3&_r=1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                        <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                        </svg> </a>
+                    <a class="custom-icon" href="https://youtube.com/@blansucrette?si=RtjxLU4bthBmu6gb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                        </svg> </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <p><a class="custom-icon" href="{{url_for('mentionsLegales')}}">Mention Légales</a></p>
+                <p class="legal-stuff">
+                    Illustrations du <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+                        <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+                    </svg>
+                    Tarot Etoilé. Reproduction interdite.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>

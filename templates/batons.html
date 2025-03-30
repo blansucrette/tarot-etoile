@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="description" content="page de signification des cartes du tarot etoile"/>
+    <meta name="authors" content="Blandine Gosselin"/>
+    <meta name="keywords" content="tarot, etoile, signification, cartes"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/tarot.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+    <title>Tarot Etoilé</title>
+</head>
+
+<header>
+    <h1 class="titre"><a class="titre" href="{{url_for('welcome')}}"> 
+        <img src="/static/petite_etoile.png" class="etoile"> Tarot Etoilé 
+        <img src="/static/petite_etoile.png" class="etoile">
+    </a></h1>
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg justify-content-center">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link" href="{{url_for('welcome')}}">Accueil</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('majeure')}}">Arcane majeure</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('batons')}}">Bâtons</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('coupes')}}">Coupes</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('epees')}}">Epées</a></li>
+                <li class="nav-item"><a class="nav-link" href="{{url_for('deniers')}}">Deniers</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<body>
+    <h4 class="page-title">Suite des bâtons</h4>
+    <div class="cards-box container-fluid" id="batons">
+        <div class="row justify-content-center">
+            <div class="flip-box carte-contour" id="asB">
+                <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="/static/asB.png" alt="as" class="carte">
+                </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Une nouvelle idée ou un nouveau projet germe dans votre esprit et même si vous avez peur de ne pas être 
+                                prêt.e, lancez vous, c’est le moment. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Si vous souhaitez vous lancer dans un projet mais que quelque chose vous gêne, attendez avant de vous 
+                                lancer, le moment n’est peut-être pas idéal, ou faites-vous aider de quelqu’un. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="flip-box carte-contour" id="deuxB">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/deuxB.png" alt="deux" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Si vous observez de loin et souhaitez entreprendre quelque chose vous-même, le moment est venu de 
+                                planifier avec le plus de détails possible. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Le moment est venu d’arrêter de planifier et visualiser, lancez- vous.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="troisB">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/troisB.png" alt="trois" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Tout en restant fidèle à vous-même et aux gens qui vous entourent, vous regardez vers l’avant. Prenez 
+                                le temps de planifier, visualiser et préparer votre meilleure stratégie. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Peut-être que votre plan n’a pas fonctionné ou que quelque chose vous empêche d’aller de l’avant. Arrêtez 
+                                de planifier et agissez pour avancer. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="quatreB">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/quatreB.png" alt="quatre" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Bien entouré.e, avec des relations saines et équilibrées, vous participez à la communauté, vous donnez et 
+                                recevez de l’amour. Célébrez les gens autour de vous, amusez-vous et profitez de ce que vous avez. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p> Vous avez peut-être du mal à exprimer votre amour à vos amis ou votre famille et à accepter le leur. Mais 
+                                le soutien ne vient pas toujours de la façon attendue.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="cinqB">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/cinqB.png" alt="cinq" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Face au débat ou à la compétition, ne reculez pas. Défendez ce en quoi vous croyez, tout en restant respectueux 
+                                de vos adversaires. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Si la bataille dégénère, peut-être devriez-vous vous retirer et prendre du recul, faire le tri parmi ce que vous 
+                                avez gagné et appris. Sinon, préparez-vous à ne pas jouer franc-jeu.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="sixB">
+                <div class="flip-box-inner">
+                <div class="flip-box-front">
+                    <img src="/static/sixB.png" alt="six" class="carte">
+                </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Ayez confiance en vous, en vos capacités à mener et prendre les rênes. Croyez en vos idées et en les personnes qui 
+                                vous entourent, afin de pouvoir les mener au succès. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p> Si vous avez échoué ou vous sentez trahi.e, prenez le temps de vous arrêter, de faire demi-tour et de changer de 
+                                voie. Si vous n’êtes pas prêt.e, continuez à planifier et faites attention à qui vous révélez votre plan.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="septB">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/septB.png" alt="sept" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Si vous avez envie de vous consacrer à un projet, faites-vous confiance et lancez-vous. Engagez-vous dans ce qui vous 
+                                tient à cœur, mettez-vous en action.                                
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Si vous hésitez  à vous engager dans quelque chose et ne savez pas comment agir, prenez du recul. Revérifiez vos options 
+                                et si nécessaire, attendez avant de prendre votre décision. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="huitB">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/huitB.png" alt="huit" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Si vous souhaitez passer à l’action, faites confiance en votre instinct pour mener les choses à bien. N’hésitez pas à exprimer 
+                                les choses, à communiquer et partager. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Si vous avez l’impression que les choses n’avancent pas, peut-être le moment est-il venu d’arrêter de les repousser et de les 
+                                faire traîner. Lancez-vous et voyez où ça vous mène.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="neufB">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/neufB.png" alt="neuf" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Malgré les obstacles, vous continuez de vous accrocher. Beaucoup a été accompli et il reste plus encore à faire, mais n’abandonnez 
+                                pas et poursuivez ce que vous désirez. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Dépassé.e par tout ce qu’il vous reste à faire, vous vous sentez abattu.e. Prenez le temps de vous remettre et demandez vous si ce à 
+                                quoi vous vous accrochez vous sert vraiment.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="dixB">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/dixB.png" alt="dix" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Vous êtes submergé.e de responsabilités et toute votre énergie et votre temps y passent. Mais vous y êtes presque, un dernier effort avant 
+                                la ligne d’arrivée. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Le moment est venu de lâcher prise. Faites une pause et réévaluez vos responsabilités, peut-être vous faut-il choisir lesquelles garder et 
+                                lesquelles abandonner.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="valetB">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/valetB.png" alt="valet" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Un long voyage commence avec un premier pas. Arrêtez de procrastiner et lancez-vous dans cette nouvelle idée, le moment est venu de vous investir, 
+                                saisissez-le. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>L’indécision et la procrastination ne vous font pas avancer. Prenez du recul pour décider si continuer en vaut la peine, ou si attendre de meilleures 
+                                conditions serait mieux.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="cavalierB">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/cavalierB.png" alt="cavalier" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Déterminée à atteindre ses objectifs, elle se met en mouvement. Partez à la conquête de vos rêves, mettez-vous en route et investissez-vous dans ce en 
+                                quoi vous croyez. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p> Si vous n’êtes plus capable de continuer, arrêtez-vous pour repenser votre plan. Prenez du recul et demandez-vous si vous devriez vous retirer.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="reineB">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/reineB.png" alt="reine" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Avec son charisme et son énergie chaleureuse, elle est une meneuse empathique et visionnaire, connectée à sa communauté. Exprimez-vous, partagez vos idées 
+                                pour accomplir les choses. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Lorsque les circonstances vous rendent incapable de communiquer et vous font douter, prenez du recul. Assurez-vous de partager vos idées avec des personnes 
+                                de confiance ouvertes .
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="flip-box carte-contour" id="roiB">
+                <div class="flip-box-inner">
+                    <div class="flip-box-front">
+                        <img src="/static/roiB.png" alt="roi" class="carte">
+                    </div>
+                    <div class="flip-box-back">
+                        <div class="text-box">
+                            <p class="sens"> <br> endroit : </p>
+                            <p>Meneur et visionnaire, il comprend les responsabilités que cela implique et sait très bien communiquer. N’ayez pas peur de vous exprimer, vous êtes capable 
+                                d'accomplir et de faire les bonnes choses. 
+                            </p>
+                            <p class="sens">envers :</p>
+                            <p>Vous avez peut-être des difficultés à accomplir certaines choses et à communiquer. Comprenez que vous n’avez pas le contrôle sur tout et soyez prêt à ce que 
+                                tout n’aille pas toujours dans votre sens.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <h5> Le Tarot Etoilé </h5>
+                <p class="legal-stuff">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+                        <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+                    </svg>
+                    Tarot Etoilé. Tous droits réservés
+                    </p>
+            </div>                
+
+            <div class="col">
+                <p> Retrouvez-moi sur les réseaux soiaux </p>
+
+                <div class="container-fluid justify-content-center">
+                    <a class="custom-icon" href="https://www.instagram.com/blandine_is_drawing/profilecard/?igsh=MXdrOG43dHk3YmEzcA==">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                        </svg> </a>
+                    <a class="custom-icon" href="https://www.tiktok.com/@blansucrette?_t=8shgAksV1C3&_r=1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                        <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                        </svg> </a>
+                    <a class="custom-icon" href="https://youtube.com/@blansucrette?si=RtjxLU4bthBmu6gb">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                        </svg> </a>
+                </div>
+            </div>
+
+            <div class="col">
+                <p><a class="custom-icon" href="{{url_for('mentionsLegales')}}">Mention Légales</a></p>
+                <p class="legal-stuff">
+                    Illustrations du <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-c-circle" viewBox="0 0 16 16">
+                        <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.146 4.992c-1.212 0-1.927.92-1.927 2.502v1.06c0 1.571.703 2.462 1.927 2.462.979 0 1.641-.586 1.729-1.418h1.295v.093c-.1 1.448-1.354 2.467-3.03 2.467-2.091 0-3.269-1.336-3.269-3.603V7.482c0-2.261 1.201-3.638 3.27-3.638 1.681 0 2.935 1.054 3.029 2.572v.088H9.875c-.088-.879-.768-1.512-1.729-1.512"/>
+                    </svg>
+                    Tarot Etoilé. Reproduction interdite.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</html>
